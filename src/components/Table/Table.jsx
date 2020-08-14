@@ -17,13 +17,14 @@ export default ({ data, update }) => {
   return (
     <table className="table">
       <thead>
-      <tr>
-        <th>ID</th>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Email</th>
-        <th>Phone</th>
-      </tr>
+        <tr>
+          {/* <th>Photo</th> */}
+          <th>ID</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+        </tr>
       </thead>
       <tbody>{users}</tbody>
     </table>

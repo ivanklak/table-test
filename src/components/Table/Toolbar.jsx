@@ -5,6 +5,7 @@ export default class Toolbar extends React.Component {
   constructor(props) {
     super(props);
     this.sorted = {
+      userPhoto: true,
       id: true,
       firstName: true,
       lastName: true,
@@ -35,11 +36,21 @@ export default class Toolbar extends React.Component {
   render() {
     return (
       <div>
-        <button className={s.sortButton} onClick={() => this.sort("id")}>Сортировать по ID</button>
-        <button className={s.sortButton} onClick={() => this.sort("firstName")}>Сортировать по имени</button>
-        <button className={s.sortButton} onClick={() => this.sort("lastName")}>Сортировать по фамилии</button>
-        <button className={s.sortButton} onClick={() => this.sort("email")}>Сортировать по email</button>
-        <button className={s.sortButton} onClick={() => this.sort("phone")}>Сортировать по телефону</button>
+        <button className={s.sortButton} onClick={() => this.sort("id")}>
+          Сортировать по ID
+        </button>
+        <button className={s.sortButton} onClick={() => this.sort("firstName")}>
+          Сортировать по имени
+        </button>
+        <button className={s.sortButton} onClick={() => this.sort("lastName")}>
+          Сортировать по фамилии
+        </button>
+        <button className={s.sortButton} onClick={() => this.sort("email")}>
+          Сортировать по email
+        </button>
+        <button className={s.sortButton} onClick={() => this.sort("phone")}>
+          Сортировать по телефону
+        </button>
       </div>
     );
   }
