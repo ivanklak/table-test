@@ -1,5 +1,5 @@
 import React from "react";
-import TableContainer from "./components/TableContainer";
+import TableContainer from "./components/Table/TableContainer";
 
 const App = props => {
   return (
