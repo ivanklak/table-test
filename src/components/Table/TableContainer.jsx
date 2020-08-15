@@ -6,22 +6,22 @@ import Toolbar from "./Toolbar";
 import SearchBar from "./SearchBar";
 import { readSync } from "fs";
 import CurrentUser from "./CurrentUser";
+import ModeSelector from "./ModeSelector";
 
 class TableContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isFetching: true,
+      isModeSelected: false,
+      isFetching: false,
       data: [],
       active: 0,
       term: ""
     };
   }
 
-  async componentDidMount() {
-    const responce = await fetch(
-      `http://www.filltext.com/?rows=32&id={number|1000}&firstName={firstName}&lastName={lastName}&email={email}&phone={phone|(xxx)xxx-xx-xx}&address={addressObject}&description={lorem|32}`
-    );
+  async fetchData(url) {
+    const responce = await fetch(url );
     const data = await responce.json();
     this.setState({
       isFetching: false,
@@ -33,7 +33,23 @@ class TableContainer extends React.Component {
     this.setState(config);
   }
 
+  modeSelectHandler = url => {
+    this.setState({
+      isModeSelected: true,
+      isFetching: true
+    })
+
+    this.fetchData(url)
+  }
+
   render() {
+    if (!this.state.isModeSelected) {
+      return (
+        <div className={"container"}> 
+        <ModeSelector onSelect={this.modeSelectHandler}/>
+        </div>
+      ) 
+    }
     return (
       <>
         {this.state.isFetching ? (
