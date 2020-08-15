@@ -1,6 +1,5 @@
 import React from "react";
 import UserData from "./UserData";
-import Toolbar from "./Toolbar";
 
 export default ({ data, update }) => {
   const users = data.map((user, index) => {

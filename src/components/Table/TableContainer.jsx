@@ -50,7 +50,7 @@ class TableContainer extends React.Component {
               update={this.updateData.bind(this)}
             />
             <Table data={this.state.data} update={this.updateData.bind(this)} />
-            <CurrentUser data={this.state.data} active={this.state.active}/>
+            <CurrentUser data={this.state.data} active={this.state.active} />
           </div>
         )}
       </>

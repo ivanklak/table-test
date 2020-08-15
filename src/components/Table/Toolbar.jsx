@@ -14,6 +14,29 @@ export default class Toolbar extends React.Component {
     };
   }
 
+  //для сортировки
+  //можно использовать библиотеку Lodash (метод orderBy) - это просто
+  
+  //import _ from "lodash"
+  //   state = {
+  //       data: [],
+  //       sort: "asc", //desc
+  //       sortField: "id"
+  //   }
+  //   sort = sortField => {
+  //       const cloneData = this.state.data.concat()
+  //       const sortType = this.state.sort === "asc" ? "desc" : "asc"
+
+  //       const orderedData = _.orderBy(cloneData, sortField, sortType)
+
+  //       this.setState({
+  //           data: orderedData,
+  //           sort: sortType,
+  //           sortField
+  //       })
+  //   }
+
+  //сортировка своими руками
   sort(type) {
     const { update, data } = this.props;
     const isSorted = this.sorted[type];

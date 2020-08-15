@@ -20,16 +20,22 @@ export default ({ data, active }) => {
               <td>{user.id}</td>
             </tr>
             <tr>
-              <td>Last Name: </td>
-              <td>{user.lastName}</td>
-            </tr>
-            <tr>
               <td>Email: </td>
               <td>{user.email}</td>
             </tr>
             <tr>
               <td>Phone: </td>
               <td>{user.phone}</td>
+            </tr>
+            <tr>
+              <td>Addres: </td>
+              <td>{user.address.city}</td>
+              <td>{user.address.state}</td>
+              <td>{user.address.streetAddress}</td>
+              <td>{user.address.zip}</td>
+            </tr>
+            <tr>
+              <textarea defaultValue={user.description} />
             </tr>
           </tbody>
         </table>
