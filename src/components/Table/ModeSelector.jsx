@@ -9,10 +9,10 @@ export default props => {
   return (
     <div style={{display: "flex", justifyContent: "center", padding: "50px 0"}}>
       <button onClick={() => props.onSelect(smallUrl)} className="btn btn-light">
-        32 юзера
+        32 users
       </button>
       <button onClick={() => props.onSelect(bigUrl)} className="btn btn-dark">
-        1000 юзеров
+        1000 users
       </button>
     </div>
   );

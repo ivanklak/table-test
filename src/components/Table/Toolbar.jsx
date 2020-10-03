@@ -16,7 +16,7 @@ export default class Toolbar extends React.Component {
 
   //для сортировки
   //можно использовать библиотеку Lodash (метод orderBy) - это просто
-  
+
   //import _ from "lodash"
   //   state = {
   //       data: [],
@@ -60,19 +60,19 @@ export default class Toolbar extends React.Component {
     return (
       <div>
         <button className={s.sortButton} onClick={() => this.sort("id")}>
-          Сортировать по ID
+          Sort by ID
         </button>
         <button className={s.sortButton} onClick={() => this.sort("firstName")}>
-          Сортировать по имени
+          Sort by Name
         </button>
         <button className={s.sortButton} onClick={() => this.sort("lastName")}>
-          Сортировать по фамилии
+          Sort by Last Name
         </button>
         <button className={s.sortButton} onClick={() => this.sort("email")}>
-          Сортировать по email
+          Sort by Email
         </button>
         <button className={s.sortButton} onClick={() => this.sort("phone")}>
-          Сортировать по телефону
+          Sort by Number
         </button>
       </div>
     );
